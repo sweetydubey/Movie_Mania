@@ -22,6 +22,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
 
     private ArrayList<Results> moviesList;
     private Context context;
+    private static final int LOADING = 0;
+    private static final int ITEM = 1;
+    private boolean isLoadingAdded = false;
 
     private ItemClickListener mClickListener;
     private String baseImagePath = "https://image.tmdb.org/t/p/w500/";
@@ -56,7 +59,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.main_list_item, parent, false);
-
         return new MyViewHolder(itemView);
     }
 

@@ -37,15 +37,8 @@ public class MainActivity extends AppCompatActivity  implements  MoviesAdapter.I
         setContentView(R.layout.activity_main);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-       // resultsModel = new Results();
-//
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-
-
-
         loadMovies();
-
 
     }
 
@@ -73,7 +66,7 @@ public class MainActivity extends AppCompatActivity  implements  MoviesAdapter.I
 //
 //                           // Log.e("title", "onResponse: " + movieList.getTitle());
 //
-//                        }
+//                        } 
 
                     }
 
